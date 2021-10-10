@@ -1,4 +1,4 @@
-photographers = {
+{
     "photographers": [
       {
         "name": "Mimi Keel ",
@@ -8,7 +8,7 @@ photographers = {
         "tags": ["portrait", "events", "travel", "animals"],
         "tagline": "Voir le beau dans le quotidien",
         "price": 400,
-        "portrait": "MimiKeel.jpg"
+        "portrait": "img/users/MK.jpg"
       },
       {
         "name": "Ellie-Rose Wilkens",
@@ -18,7 +18,7 @@ photographers = {
         "tags": ["sports", "architecture"],
         "tagline": "Capturer des compositions complexes",
         "price": 250,
-        "portrait": "EllieRoseWilkens.jpg"
+        "portrait": "img/users/ERW.jpg"
       },
       {
         "name": "Tracy Galindo",
@@ -28,7 +28,7 @@ photographers = {
         "tags": ["art", "fashion", "events"],
         "tagline": "Photographe freelance",
         "price": 500,
-        "portrait": "TracyGalindo.jpg"
+        "portrait": "img/users/TG.jpg"
       },
       {
         "name": "Nabeel Bradford",
@@ -38,7 +38,7 @@ photographers = {
         "tags": ["travel", "portrait"],
         "tagline": "Toujours aller de l'avant",
         "price": 350,
-        "portrait": "NabeelBradford.jpg"
+        "portrait": "img/users/NB.jpg"
       },
       {
         "name": "Rhode Dubois",
@@ -48,7 +48,7 @@ photographers = {
         "tags": ["sport", "fashion", "events", "animals"],
         "tagline": "Je crée des souvenirs",
         "price": 275,
-        "portrait": "RhodeDubois.jpg"
+        "portrait": "img/users/RD.jpg"
       },
       {
         "name": "Marcel Nikolic",
@@ -58,7 +58,7 @@ photographers = {
         "tags": ["travel", "architecture"],
         "tagline": "Toujours à la recherche de LA photo",
         "price": 300,
-        "portrait": "MarcelNikolic.jpg"
+        "portrait": "img/users/MN.jpg"
       }
     ],
     "media": [
