@@ -6,7 +6,7 @@
   //Loop through every object in our JSON object
 
 
-  fetchData("../photographers.json").then((data)=>{
+  fetchData("fishEyeData.json").then((data)=>{
 
        //récupérer la div, intégrer le html
       //  document.querySelector("#photographers").innerHTML = createPhotographers(data);
