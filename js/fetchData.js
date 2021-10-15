@@ -12,18 +12,18 @@ function fetchData(url){
 
          //FETCH JSON DATA 
 
-        fetch(url)
-        .then(function (response) {
+        fetch('./dataPhotographers/fishEyeData.json').then(function (response) {
             return response.json();
-            // The JSON data will arrive here as a response
+            // convertit le body du JSON, et le convertit en un objet js. Puis retourne une nouvelle promesse
         })
         .then(function (data) {
-            resolve(data);
+            console.log(data);
+            //resolve(data);
             //récupérer la donnée lisible  
             //This is where we create the code which will append the data to our page.
         })
         .catch(function (err) {
-            alert(err);
+            alert('Error');
             // If an error occured, you will catch it here
         });
 

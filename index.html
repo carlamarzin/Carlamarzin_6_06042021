@@ -20,28 +20,28 @@
             <nav aria-label="Photographer categories" class="photographer__categories" role="search">
                 <ul class="category">
                     <li>
-                        <a href="" class="tag portraits">#Portaits</a>
+                        <button type="button" class="buttonTag portraits">#Portaits</button>>
                     </li>
                     <li>
-                        <a href="" class="tag art">#Art</a>
+                        <button type="button" class="buttonTag art">#Art</button>>
                     </li>
                     <li>
-                        <a href="" class="tag fashion">#Fashion</a>
+                        <button type="button" class="buttonTag fashion">#Fashion</button>>
                     </li>
                     <li>
-                        <a href="" class="tag architecture">#Architecture</a>
+                        <button type="button" class="buttonTag architecture">#Architecture</button>>
                     </li>
                     <li>
-                        <a href="" class="tag travel">#Travel</a>
+                        <button type="button" class="buttonTag travel">#Travel</button>>
                     </li>
                     <li>
-                        <a href="" class="tag sport">#Sport</a>
+                        <button type="button" class="buttonTag sport">#Sport</button>>
                     </li>
                     <li>
-                        <a href="" class="tag animals">#Animals</a>
+                        <button type="button" class="buttonTag animals">#Animals</button>>
                     </li>
                     <li>
-                        <a href="" class="tag events">#Events</a>
+                        <button type="button" class="buttonTag events">#Events</button>>
                     </li>
                 </ul>
             </nav>
@@ -51,7 +51,7 @@
 
         <main>
             <div id="photographers" class="photographer__wrapper">
-                <!-- <article class="photographer">
+                <article class="photographer">
                     <a href="" class="photographer__image">
                         <img src="img/users/MK.jpg" alt="Portrait de Mimi Keel">
                         <h2>Mimi Keel</h2>
@@ -151,14 +151,28 @@
                         <a href="" class="tag">#travel</a>
                         <a href="" class="tag">#architecture</a>
                     </div>
-                </article> -->
+                </article>
             </div>
         </main>
 
         <footer>
         </footer>
     </body>
+    <script>
+        fetch('./dataPhotographers/fishEyeData.json').then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data);
+                })
+                .catch(function (err) {
+                    console.error(error);
+                });
+
+    </script>
+    <script type="text/javascript" src="dataPhotographers/fishEyeData.json"></script>
     <script type="text/javascript" src="js/fetchData.js"></script>
     <script type="text/javascript" src="js/createPhotographers.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/filterByTag.js"></script>
 </html>

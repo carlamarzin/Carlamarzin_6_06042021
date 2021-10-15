@@ -1,6 +1,6 @@
    "use strict";
 
-  fetchData("fishEyeData.json").then((data)=>{
+  fetchData("../dataPhotographers/fishEyeData.json").then((data)=>{
   });
 
   
