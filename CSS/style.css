@@ -84,16 +84,17 @@ color: #901C1C;
     background-color: #901C1C;
     color: white;
     font-weight: bold;
-    transition-duration: 1s;
+    transition-duration: .2s;
 }
 
 .nos_photographes{
-    font-size: 36px;
+    font-size: 30px;
     color: #901C1C;
     padding-top: 15px;
 }
 
 #passer_au_contenu{
+    display: none;
     font-size: 18px;
     background-color: #DB8876;
     color: black;

@@ -22,6 +22,8 @@ ol, ul {
 
 body{
     margin: 40px 80px;
+    max-width: 1300px;
+    justify-content: center;
 }
 
 /* HEADER */
@@ -40,10 +42,12 @@ header img{
     vertical-align: center;
     background-color: rgb(247, 247, 247);
     position: relative;
+    width: 100%;
 }
 .photographer__image img{
  width: 150px;
  height: 150px;
+ object-fit: cover;
  clip-path: circle(50%);
  display: flex;
  justify-content: center;
@@ -71,6 +75,16 @@ h2{
     margin-bottom: 10px;
 }
 
+.photographer__content__text_wrapper{
+    display: flex;
+    justify-content: space-between;
+    color: #901C1C;
+}
+
+.nbr_of_likes{
+    color: #901C1C;
+}
+
 .tag {
     color: #901C1C;
     padding: 5px;
@@ -87,20 +101,81 @@ h2{
     border-radius: 5px;
     color: white;
     padding: 15px 10px;
+    margin-top: 10px;
 }
 
 .photographer__content{
+    max-width: 1300px;
     display: grid;
+    flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 60px;
+}
+
+.photographer__content__article{
+    padding-bottom: 10px;
+}
+
+.photographer__content__article img{
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 
 /* PHOTOGRAPHY CONTENT */
 /* PHOTOGRAPHY CONTENT */
 /* PHOTOGRAPHY CONTENT */
+
+.photographer__trier{
+    text-decoration: none;
+    margin: 20px 0 40px 0;
+}
+
+#trier_par{
+    background-color: #901C1C;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+}
+.trier_par_border{
+    border-top: 1px solid white;
+}
 
 .photographer_content_post{
     color: #901C1C;
     font-size: 20px;
+}
+
+.photographer_content_likes img{
+    height: 13px;
+    width: 13px;
+    border-radius: 0;
+    fill: #901C1C;
+}
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+
+.photographer_statistics{
+    background-color: #DB8876;
+    color: black;
+    width: 300px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 200px;
+    padding: 15px 25px;
+}
+
+.photographer_statistics img{
+    height: 20px;
+    padding-top: 5px;
 }
