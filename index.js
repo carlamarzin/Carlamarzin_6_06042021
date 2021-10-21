@@ -1,6 +1,6 @@
   "use strict";
 
-  fetchData("../json/fishEyeData.json").then((data)=>{
+  fetchData("./json/fishEyeData.json").then((data)=>{
 
       if(data === "Impossible de recupérer les données"){
 
