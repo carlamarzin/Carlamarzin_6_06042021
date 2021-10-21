@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    cursor: pointer;
     scroll-behavior: smooth;
 
     margin: 0;
@@ -137,6 +136,7 @@ h2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    margin:0 auto;
     margin-bottom: 100px;
     max-width: 1300px;
 }
@@ -152,7 +152,6 @@ h2{
 
 .photographer__text__leitmotiv{
     font-size: 11px;
-    color: ;
     margin-bottom: 2px;
 }
 .photographer__text__price{

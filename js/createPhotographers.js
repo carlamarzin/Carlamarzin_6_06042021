@@ -1,3 +1,12 @@
+ "use strict";
+ 
+ /** 
+   * Fonction qui permet de creer le Dom des photographes a partir d'un tableau JSON
+   * @param {array} data
+   * @return {html}
+
+ */ 
+
 function createPhotographers(data){
 
     let html = "";
@@ -8,10 +17,7 @@ function createPhotographers(data){
         html+= `
         <article class="photographer">
             <a href="" class="photographer__image">
-                <img src="img/users/ERW.jpg" alt="Portrait de Ellie-Rose Wilkens">
-
                 <img src=${data[i].portrait} alt= Photo de ${data[i].name} />
-
                 <h2>${data[i].name}</h2>
             </a>
             <div class="photographer__text">
@@ -20,8 +26,8 @@ function createPhotographers(data){
                 <p class="photographer__text__price">${data[i].price}€/jour</p>
             </div>
             <div class="photographer__link">
-                <a href="" class="tag">#${data[i].tags.map((detail)=>{
-                    return `<a href="" class="tag"> ${detail}</a>`
+                ${data[i].tags.map((detail)=>{
+                    return `<span class="tag"> #${detail}</span>`
                 }).join("")}
             </div>
         </article>
