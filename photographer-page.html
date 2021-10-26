@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     
     <link rel="stylesheet" href="CSS/photographer-page.css" />
+    <link rel="stylesheet" href="CSS/form-modale.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +33,7 @@
                     <a href="" class="tag">#animals</a>
                 </div>
             </div>         
-            <div class="photographer__contacter">Contactez-moi</div>
+            <div class="photographer__contacter modal-btn">Contactez-moi</div>
             <a href="" class="photographer__image">
                 <img src="img/users/MK.jpg" alt="Portait of Mimi Keel">              
             </a>
@@ -49,7 +50,7 @@
 
 
         <section class="photographer__content">
-            <article class="photographer__content__article">
+            <article class="photographer__content__article lb-modal-btn">
                 <img src="img/photographs/Mimi/Animals_Rainbow.jpg" alt="picture of a bird">
                 <div class="photographer__content__text_wrapper">
                     <h3 class="photographer_content_post">Arc-en-ciel</h3>
@@ -124,22 +125,94 @@
             <div class="photographer_statistics_likes_price">300€/jour</div>
         </aside>
 
-        <div class="background">
-            <div class="modal">
-                <span class="modal_close"></span>
-                <div class="modal">
-                    <form               
-                    id="form"
-                    name="reserve"
-                    action="photographer-page.html"
-                    method="get">
-
-                    </form>
+        <div class="bground">
+            <div class="content">
+              <span class="close"></span>
+              <div class="modal-body">
+                  <div class="contactez-moi">Contactez-moi</div>
+                  <div class="contactez-moi_photographer">Mimi Keel</div>
+                <form
+                  id="form"
+                  name="reserve"
+                  action="index.html"
+                  method="get"
+                >
+                  <div
+                    class="formData">
+                    <label for="first">Prénom</label><br>
+                    <input
+                      class="text-control"
+                      type="text"
+                      id="first"
+                      name="first"
+                      minlength="2"
+                      required
+                    />
+                    <span class="errorMessage" id="prenomInvalide"></span><br>
+                  </div>
+                  <div
+                    class="formData">
+                    <label for="last">Nom</label><br>
+                    <input
+                      class="text-control"
+                      type="text"
+                      id="last"
+                      name="last"
+                      minlength="2"
+                      required
+                    />
+                    <span class="errorMessage" id="nomInvalide"></span><br>
+                  </div>
+                  <div
+                    class="formData">
+                    <label for="email">E-mail</label><br>
+                    <input
+                      class="text-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      required 
+                    />
+                    <span class="errorMessage" id="emailInvalide"></span><br>
+                  </div>
+                  <divc 
+                    class="formData">
+                    <label for="message">Votre message</label>
+                    <textarea 
+                        class="text-control"
+                        name="message" 
+                        id="message" >
+                    </textarea>
+                  </div>
+                    
+                  </div>
+                  <input
+                    class="btn-submit"
+                    class="button"
+                    type="submit"
+                    value="Envoyer"
+                  />
+                </form>
+              </div>
+            </div>
+        </div>
+        <div class="lb-bground">
+            <div class="lightbox-modal">
+                <span class="lb-close"></span>
+                <div class="lightbox-modal_body">
+                    <img class="fleche" src="img/chevron-left-solid.svg" alt="flèche précédente">
+                    <div class="photographer-image">
+                        <img src="img/photographs/Mimi/Animals_Rainbow.jpg" alt="image d'un oiseau">
+                        <span class="lightbox-modal_text">Arc-en-ciel</span>
+                    </div>
+                    <img class="fleche" src="img/chevron-right-solid.svg" alt="flèche suivante">
                 </div>
             </div>
         </div>
             
     </main>
 </body>
+
+<script type="text/javascript" src="js/openCloseModal.js"></script>
 
 </html>
