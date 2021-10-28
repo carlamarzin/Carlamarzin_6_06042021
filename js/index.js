@@ -12,9 +12,26 @@
 
       const tags = document.querySelectorAll('.buttonTag');
 
-      console.log(tags);
+      const j = tags.length;
 
-      filterByTag();
+      for(let i=0; i<j; i++){
+
+           tags[i].addEventListener("click", function(){
+
+
+                // On recupere la valeur textuelle du tag
+                // https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/data-*
+
+                const actualTag = this.dataset?.tag;
+
+                const filterPhotographers = filterByTag(data?.photographers, actualTag);
+
+                document.querySelector("#photographers").innerHTML = createPhotographers(filterPhotographers);
+
+
+           });
+
+      }
     
   });
 

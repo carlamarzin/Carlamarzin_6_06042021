@@ -78,6 +78,7 @@ color: #901C1C;
     font-weight: bold;
     margin-right: 6px;
     background-color: white;
+    cursor:pointer;
 }
 .buttonTag:hover{
     background-color: #901C1C;
