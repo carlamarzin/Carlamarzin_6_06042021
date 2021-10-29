@@ -89,7 +89,7 @@
     margin: 0;
     padding: 8px;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 2px;
     font-size: 20px;
     height: 48px;
   }
@@ -236,8 +236,6 @@
   .btn-submit,
   .btn-signup {
     background: #901C1C;
-    display: block;
-    margin: 0 auto;
     border-radius: 7px;
     font-size: 1rem;
     padding: 12px 82px;
@@ -245,6 +243,13 @@
     cursor: pointer;
     border: 0;
     height: 40px;
+  }
+  .btn-submit{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 12px 24px;
+    font-size: 12px;
+    border-radius: 3px;
   }
   .btn-close{
     background: #fe142f;
