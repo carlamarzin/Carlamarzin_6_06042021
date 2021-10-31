@@ -44,9 +44,9 @@
         <div class="photographer__trier">
             <label for="trier_par">Trier par</label>
             <select name="trierPar" id="trier_par">
-                <option value="popularite">Popularité</option>
-                <option value="date" class="trier_par_border">Date</option>
-                <option value="titre" class="trier_par_border">Titre</option>
+                <option value="popularite" class="trier_par_border" data-trier="popularite">Popularité</option>
+                <option value="date" class="trier_par_border" data-trier="date">Date</option>
+                <option value="titre" class="trier_par_border"data-trier="titre">Titre</option>
             </select>
         </div>
 
@@ -182,18 +182,21 @@
                     <label for="message">Votre message</label>
                     <textarea 
                         class="text-control"
-                        name="message" 
-                        id="message" >
-                    </textarea>
+                        name="message"
+                        id="message" ></textarea>
                   </div>
                 </form>
+                <div class="content-success" id="content-success">
+                    <p>Merci! Votre formulaire a bien été pris en compte.</p>
+                    <button class="btn-close">Close</button>
+                  </div>
                 <div>
                     <input
                         class="btn-submit"
-                        class="button"
                         type="submit"
                         value="Envoyer"
                     />
+                    <span class="errorMessage" id="messageInvalide"></span><br>
                     </div>
               </div>
             </div>
@@ -216,5 +219,7 @@
 </body>
 
 <script type="text/javascript" src="js/openCloseModal.js"></script>
+<script type="text/javascript" src="js/formValidation.js"></script>
+
 
 </html>

@@ -110,7 +110,7 @@
   
   .errorMessage{
     font-size: 10px;
-    color: red;
+    color: #901C1C;
   }
   
   .success{
@@ -375,4 +375,32 @@
   .fleche{
     width: 20px;
     margin: 20px;
+  }
+
+  .error{
+    margin: 0;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 20px;
+    height: 48px;
+    border: 3px solid #901C1C;
+  }
+
+  .content-success{
+    display: none;
+    font-family: var(--font-default);
+    font-size: 30px;
+    font-weight: normal;
+  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 4rem 0 4rem;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .content-success p {
+    padding : 12rem 0;
   }

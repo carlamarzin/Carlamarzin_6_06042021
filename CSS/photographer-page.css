@@ -150,8 +150,9 @@ article{
     padding: 10px;
     margin-left: 10px;
 }
-.trier_par_border{
+.trier_par option{
     border-top: 1px solid white;
+    border-color: transparent transparent white transparent;
 }
 
 .photographer_content_post{
