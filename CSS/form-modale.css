@@ -404,3 +404,7 @@
   .content-success p {
     padding : 12rem 0;
   }
+
+  .display-none{
+    display: none;
+  }

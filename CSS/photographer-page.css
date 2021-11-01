@@ -39,7 +39,7 @@ header img{
 main{
     margin: 0 auto;
 }
-.photographer{
+#photographer{
     padding: 50px;
     display: flex;
     flex-direction: row;

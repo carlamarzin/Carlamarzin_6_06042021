@@ -80,7 +80,7 @@ function validationPrenom(){
   }
 
   //vérification générale de tous les champs 
-function validationGenerale(e){
+    function validationGenerale(e){
     e.preventDefault();
   
     //vérifier la validité de chaque champs
@@ -91,7 +91,6 @@ function validationGenerale(e){
   
     //vérifier que tous les champs sont valides, AINSI le formulaire sera valide
     let formulaireValide = prenomValide && nomValide && emailValide && messageValide;
-    
     if (formulaireValide){
       e.preventDefault();
       //affichage du message de validation (remplacer le contenu de la modale, par un message de validation)
@@ -99,6 +98,10 @@ function validationGenerale(e){
       formulaire.style.display = "none";
       let modalSuccess = document.getElementById("content-success");
       modalSuccess.style.display = "flex";
+      let modalBody = document.getElementsByClassName("modal-body");
+      modalBody.className = "display-none";
+      let buttonSubmit = document.getElementsByClassName("btn-submit");
+      buttonSubmit.className = "display-none";
     }else{
       return false;
     }
