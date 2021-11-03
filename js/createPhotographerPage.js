@@ -7,6 +7,9 @@
 
  */ 
 
+ // let media = mediaArray.find(media => media.id == 150) pour récupérer le média à l'id 150 
+
+ 
 function createPhotographerPage(data){
 
     let htmlPhotographerPage = "";

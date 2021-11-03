@@ -43,13 +43,14 @@
 
         <div class="photographer__trier">
             <label for="trier_par">Trier par</label>
-            <select name="trierPar" id="trier_par">
-                <option value="popularite" class="trier_par_border" data-trier="popularite">Popularité</option>
-                <option value="date" class="trier_par_border" data-trier="date">Date</option>
-                <option value="titre" class="trier_par_border"data-trier="titre">Titre</option>
-            </select>
+            <div class="custom-select" style="width:200px;">
+              <select>
+                <option value="0">Popularité</option>
+                <option value="1">Date</option>
+                <option value="2">Titre</option>
+              </select>
+            </div>
         </div>
-
 
         <section class="photographer__content">
             
@@ -57,7 +58,7 @@
 
         <aside class="photographer_statistics">
             <div class="photographer_statistics_likes">
-                <span class="photographer_statistics_likes_nbr">297 081</span>
+                <span class="photographer_statistics_likes_nbr">7 081</span>
                 <img src="img/heartBlack.svg" alt="heart">
             </div>
             <div class="photographer_statistics_likes_price">300€/jour</div>
@@ -160,9 +161,11 @@
 <script type="text/javascript" src="js/createPhotographerPage.js"></script>
 <script type="text/javascript" src="js/createPhotographerContent.js"></script>
 <script type="text/javascript" src="js/fetchData.js"></script>
+<script type="text/javascript" src="js/likeListenner.js"></script>
+<script type="text/javascript" src="js/likeTotalNumber.js"></script>
 <script type="text/javascript" src="js/openCloseModal.js"></script>
 <script type="text/javascript" src="js/formValidation.js"></script>
 <script type="text/javascript" src="js/photographer-page.js"></script>
-
+<script type="text/javascript" src="js/trierPar.js"></script>
 
 </html>

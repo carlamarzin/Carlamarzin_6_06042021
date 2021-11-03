@@ -273,9 +273,7 @@
   .custom-select select {
     display: none;
   }
-  .select-selected {
-    background-color: #fff;
-  }
+
 
   /* Hide the items when the select box is closed: */
 .select-hide {

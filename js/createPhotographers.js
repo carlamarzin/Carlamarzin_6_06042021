@@ -16,7 +16,7 @@ function createPhotographers(data){
     for(let i=0; i<j; i++){
         html+= `
         <article class="photographer">
-            <a href="photographer-page.html/user${data[i].id}" class="photographer__image">
+            <a href="photographer-page.html?id=${data[i].id}" class="photographer__image">
                 <img src=${data[i].portrait} alt= Photo de ${data[i].name} />
                 <h2>${data[i].name}</h2>
             </a>

@@ -18,3 +18,12 @@
 
                 if (data[i].photographerId === data[i].id){
 /*
+
+
+            <div class="selectionner">
+              <select name="trierPar" id="trier_par">
+                <option value="popularite" class="trier_par_border" data-trier="popularite">Popularité</option>
+                <option value="date" class="trier_par_border" data-trier="date">Date</option>
+                <option value="titre" class="trier_par_border"data-trier="titre">Titre</option>
+              </select>
+            </div>
