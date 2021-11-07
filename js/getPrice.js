@@ -1,13 +1,13 @@
 "use strict";
  
  /** 
-   * Fonction qui permet de creer le Dom des photographes a partir d'un tableau JSON
-   * @param {array} dataLikes
+   * Fonction qui permet de récupérer le prix de chaque photographe, à afficher en bas de page 
+   * @param {array} data
    * @return {number}
 
  */ 
 
-function likeTotalNumber(mediaLikesArray){
+  function getPrice(data){
 
     var totalPhotographersLikes = 0
 

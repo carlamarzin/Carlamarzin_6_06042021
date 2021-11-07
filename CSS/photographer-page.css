@@ -205,6 +205,7 @@ article{
     position: relative;
     font-family: Arial;
     background-color: #901C1C;
+    border-radius: 5px;
   }
   
   .custom-select select {
@@ -238,7 +239,8 @@ article{
     color: white;
     padding: 8px 16px;
     border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    border-color: transparent transparent white transparent;
+    border-radius: 5px;
     cursor: pointer;
   }
   
@@ -246,6 +248,7 @@ article{
   .select-items {
     position: absolute;
     background-color: #901C1C;
+    border-radius: 0 0 5px 5px;
     top: 100%;
     left: 0;
     right: 0;

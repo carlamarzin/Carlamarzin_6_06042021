@@ -16,6 +16,6 @@ function likeIncrement(data){
         sumlike += array[i]; 
       }
       return sumlike ;
-    })
+    });
 
 }

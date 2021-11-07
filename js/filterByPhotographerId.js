@@ -8,7 +8,6 @@
 
 */
 
-    // La reference de l'ID est ${data[i].photographerId} chez les médias et ${data[i].id} chez les photographes
 
 
 function getPhotographerInfo(id, photographersData){
@@ -18,6 +17,7 @@ function getPhotographerInfo(id, photographersData){
         if (Number(photographer.id) === Number(id)){
 
             return photographer;
+            
         };
 
     });
@@ -31,9 +31,9 @@ function getPhotographerInfo(id, photographersData){
 
     });
 
+    console.log(photographerPersonalInfo);
     return { 
         infos: photographerPersonalInfo,
         medias: photographerMedias
     }
 };
-
