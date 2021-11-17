@@ -16,6 +16,7 @@
       document.querySelector("#photographers").innerHTML = createPhotographers(data?.photographers);
 
       const tags = document.querySelectorAll('.buttonTag');
+      console.log(tags);
       // je récupère dans le DOM, l'emplacement des tags à selectionner
 
       const j = tags.length;

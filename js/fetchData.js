@@ -26,7 +26,6 @@ function fetchData(url){
             // La promesse résoud l'objet Response représentant la réponse de votre requête
             // La méthode Promise.resolve(valeur) renvoie un objet Promise qui est résolu avec la valeur donnée.
             // This is where we create the code which will append the data to our page.
-            console.log(data);
         })
         .catch(function (err) {
              resolve("Impossible de recupérer les données");

@@ -31,7 +31,6 @@ function getPhotographerInfo(id, photographersData){
 
     });
 
-    console.log(photographerPersonalInfo);
     return { 
         infos: photographerPersonalInfo,
         medias: photographerMedias

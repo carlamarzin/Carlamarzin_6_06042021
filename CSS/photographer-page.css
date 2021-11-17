@@ -67,6 +67,9 @@ h2{
     margin-top: 5px;
 }
 
+.photographer__text{
+    padding-right: 30px;
+}
 
 .photographer__text__location{
     font-size: 20px;
@@ -166,7 +169,7 @@ article{
     font-size: 20px;
     position: fixed;
     bottom: 0;
-    right: 200px;
+    right: 80px;
     padding: 15px 25px;
 }
 
@@ -179,6 +182,14 @@ article{
 /* TRIER PAR */
 /* TRIER PAR */
 
+.photographer__trier{
+    display: flex;
+    padding: 20px 0 40px 0;
+}
+.trier_par{
+    font-weight: bold;
+    padding-right: 20px;
+}
 /* TRIER PAR
 
 .photographer__trier{
@@ -262,5 +273,13 @@ article{
   
   .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .video{
+    width: 100%;
+    height: 300px;
+    object-position: 50% 50%;
+    object-fit: cover;
+    border-radius: 8px;
   }
   

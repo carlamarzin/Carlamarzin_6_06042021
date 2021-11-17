@@ -57,3 +57,9 @@ closeButtonLB.addEventListener('click', closeLBModal);
 function closeLBModal() {                     
   modalbgLB.style.display = 'none';
 }
+
+
+//Je veux qu'à chaque click sur une photo, j'ouvre la modale lightbox, avec la photo correspondante
+//J'écoute le click sur la photo
+//Je récupère l'ID de la photo 
+//Au click, j'ouvre la modale, je génère du HTML avec la photo spéciale. 

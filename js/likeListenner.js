@@ -7,6 +7,7 @@
 
  */ 
 
+
 function likeIncrement(data){
 
     var likeToListen = document.getElementsByClassName("photographer_content_likes");
@@ -17,5 +18,11 @@ function likeIncrement(data){
       }
       return sumlike ;
     });
-
 }
+
+
+var counter = 0;
+$('.photographer_content_likes').click(function (){
+    counter++;
+    $(this).html(counter);
+});
