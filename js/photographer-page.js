@@ -18,6 +18,8 @@
 
           document.querySelector(".photographer__content").innerHTML = createPhotographerMedia(photographerInfo?.medias);
 
+          formContact();
+
 
           //LIKES & MEDIA
           //LIKES & MEDIA

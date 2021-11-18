@@ -29,7 +29,7 @@ function createPhotographerProfile(photographerPersonalInfo){
                     }).join("")}
                     </div>
                 </div>         
-                <div class="photographer__contacter modal-btn" role="dialog" aria-describedby="Fenêtre pour contacter le photographe">Contactez-moi</div>
+                <div id="display-form" class="photographer__contacter modal-btn" role="dialog" aria-describedby="Fenêtre pour contacter le photographe">Contactez-moi</div>
                 <a href="" class="photographer__image">
                     <img src="${photographerPersonalInfo[i].portrait}" alt="portrait of${photographerPersonalInfo[i].name}">              
                 </a>
