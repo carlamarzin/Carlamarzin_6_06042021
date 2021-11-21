@@ -6,11 +6,14 @@
 
  */ 
 
-// On clique sur le bouton contactez moi
+function formContact(){
 
-// document.querySelector("#display-form").addEventListener("click", ()=>{
+     // On clique sur le bouton contactez moi
 
-//      return document.querySelector("#form-contact").style.display = "block";
+    document.querySelector("#display-form").addEventListener("click", ()=>{
 
+       return document.querySelector("#form-contact").style.display = "block";
 
-// });
+    });
+
+}

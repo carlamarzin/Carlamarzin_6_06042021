@@ -107,6 +107,13 @@
     height: 48px;
     border: 2px solid #e54858;
   }
+
+  #message{
+      
+      height:120px;
+      resize:none;
+
+  }
   
   .errorMessage{
     font-size: 10px;
