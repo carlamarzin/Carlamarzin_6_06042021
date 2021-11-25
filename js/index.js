@@ -16,7 +16,6 @@
       document.querySelector("#photographers").innerHTML = createPhotographers(data?.photographers);
 
       const tags = document.querySelectorAll('.buttonTag');
-      console.log(tags);
       // je récupère dans le DOM, l'emplacement des tags à selectionner
 
       const j = tags.length;
@@ -26,11 +25,11 @@
 
            tags[i].addEventListener("click", function(){
                 // J'écoute l'évènement click sur chaque tag
-                // On recupere la valeur textuelle du tag
+                // On récupère la valeur textuelle du tag
                 // https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/data-*
 
                 const actualTag = this.dataset?.tag;
-                // Je récupère dans le DOM le tag selectionné , et récupère son nom exact, grace au data-tag
+                // Je récupère dans le DOM le tag selectionné, et récupère son nom exact, grace au data-tag
 
                 const filterPhotographers = filterByTag(data?.photographers, actualTag);
                 // J'applique ensuite la fonction pour filtrer les photographes selon leurs tags

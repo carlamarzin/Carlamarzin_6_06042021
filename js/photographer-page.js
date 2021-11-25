@@ -18,49 +18,34 @@
 
           document.querySelector(".photographer__content").innerHTML = createPhotographerMedia(photographerInfo?.medias);
 
+
+          // J'apelle la fonction pour ouvrir le formulaire de contact 
           formContact();
 
+          // J'apelle la fonction pour ouvrir la lightbox
+          lightboxOpen();
 
-          //LIKES & MEDIA
-          //LIKES & MEDIA
-          //LIKES & MEDIA
+          // J'apelle la fonction pour modifier le nombre total de like
+          //likeTotalNumber();
 
-          // I increment the number of like of each media, each time I click on the number/like div 
-          var likeDiv = document.querySelector(".photographer_content_likes");
-          var numberOfLikes = document.querySelector(".nbr_of_likes");
-
-          likeDiv.addEventListener("click", () => {
-            numberOfLikes.textContent = parseInt(numberOfLikes.textContent) +1 ;
-
-            //Je récupère les nouveaux totaux de likes
-            //let updatedLikesArray = parseInt(numberOfLikes.textContent).map
-
-            let mediaLikesArray = photographerInfo?.medias.map(media => media.likes);
-            let mediaLikesSorted = mediaLikesArray.sort();
-
-            document.querySelector(".photographer_statistics_likes_nbr").innerHTML = likeTotalNumber(mediaLikesArray);
-
-            const sortedMedia = photographerMedia.sort();
+          //J'apelle la fonction pour augmenter le nombre de like, en fonction du nombre de cliques
+          addOneLike();
 
 
-          });
-          
-          console.log(parseInt(numberOfLikes.textContent));
-          //I create a new array, with all the likes
 
-          let mediaLikesArray = photographerInfo?.medias.map(media => media.likes);
-          let mediaLikesSorted = mediaLikesArray.sort();
 
-          //I call the likedTotalNumber function, and integrates the new number inside the HTML
-          document.querySelector(".photographer_statistics_likes_nbr").innerHTML = likeTotalNumber(mediaLikesArray);
 
 
           // PRICE
           // PRICE
           // PRICE
+
+          //J'apelle la fonction pour afficher le tarif de chaque photographe 
+          //photographerPrice();
 
           //Je récupère l'info du prix du photographe, et je l'intègre en HTML
           let photographerPrice = photographerInfo?.infos.map(info => info.price);
+          console.log(photographerPrice);
           document.querySelector(".photographer_statistics_likes_price").innerHTML = Number(photographerPrice) + "€/jour";
 
                     // je crée un array, contenant tous les médias
@@ -69,11 +54,15 @@
                     //je récupère l'élément likes sur
                     const sortedMedia = photographerMedia.sort();
 
+
+
+
           // TRIER PAR
           // TRIER PAR
           // TRIER PAR
 
           //je stocke chaque valeur de filtre dans des variables 
+
           const filtrePopularite = document.querySelector("#popularite");
           const filtreDate = document.querySelector("#date");
           const filtreTitre = document.querySelector("#titre");
@@ -102,6 +91,18 @@
             console.log(mediasDateArrSorted);
             document.querySelector(".photographer__content").innerHTML = createPhotographers(mediasDateArrSorted);
           });
+
+
+          //J'apelle la fonction pour la lightbox, et lui passe deux paramètres > le premier est le array des médias
+          //Pour le second paramètre : je récupère l'élément sur lequel le user a cliqué
+
+          //J'écoute le click sur la photo > je déclenche l'ouverture de la lightbox, et la fonction correspondante 
+
+          document.querySelector('.photographer__content__article_media').innerHTML = addEventListener('click', function(){
+            lightboxOpen();
+            lightbox(photographerInfo.medias, (media => media));
+          });
+
 
       });
       

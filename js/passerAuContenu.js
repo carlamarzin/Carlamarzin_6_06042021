@@ -17,7 +17,7 @@
     }
  })
 
- /* AU click sur passerAuContenu, je veux renvoyer l'utilisateur en haut de page */
+ /* Au click sur passerAuContenu, je veux renvoyer l'utilisateur en haut de page */
 
  passerAuContenu.addEventListener("click", function() {
     window.scrollTo(0, 0);

@@ -8,7 +8,7 @@
 
 function formContact(){
 
-     // On clique sur le bouton contactez moi
+   // je surveille le clique sur le bouton contactez moi
 
     document.querySelector("#display-form").addEventListener("click", ()=>{
 

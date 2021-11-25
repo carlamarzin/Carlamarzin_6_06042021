@@ -45,10 +45,10 @@
 
         <aside class="photographer_statistics">
             <div class="photographer_statistics_likes">
-                <span class="photographer_statistics_likes_nbr">7 081</span>
+                <span class="photographer_statistics_likes_nbr"> </span>
                 <img src="img/heartBlack.svg" alt="heart">
             </div>
-            <div class="photographer_statistics_likes_price">300€/jour</div>
+            <div class="photographer_statistics_likes_price">€/jour</div>
         </aside>
 
         <div class="bground" id="form-contact">
@@ -110,6 +110,7 @@
                     <textarea 
                         aria-labelledby="ici votre message"
                         class="text-control"
+                        minlength="50"
                         name="message"
                         id="message" ></textarea>
                   </div>
@@ -132,12 +133,12 @@
             <div class="lightbox-modal">
                 <span class="lb-close"></span>
                 <div class="lightbox-modal_body">
-                    <img class="fleche" src="img/chevron-left-solid.svg" alt="flèche précédente">
+                    <img class="fleche previous" src="img/chevron-left-solid.svg" alt="flèche précédente">
                     <div class="photographer-image">
-                        <img src="img/photographs/Animals_Rainbow.jpg" alt="image d'un oiseau">
+                        <img class="lightbox_content" src="img/photographs/Animals_Rainbow.jpg" alt="image d'un oiseau">
                         <span class="lightbox-modal_text">Arc-en-ciel</span>
                     </div>
-                    <img class="fleche" src="img/chevron-right-solid.svg" alt="flèche suivante">
+                    <img class="fleche next" src="img/chevron-right-solid.svg" alt="flèche suivante">
                 </div>
             </div>
         </div>
@@ -151,11 +152,15 @@
 <script type="text/javascript" src="js/createPhotographerMedia.js"></script>
 <script type="text/javascript" src="js/mediasFactory.js"></script>
 <script type="text/javascript" src="js/formContact.js"></script>
+<script type="text/javascript" src="js/lightboxOpen.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
 <script type="text/javascript" src="js/fetchData.js"></script>
-<script type="text/javascript" src="js/likeTotalNumber.js"></script>
 <script type="text/javascript" src="js/formValidation.js"></script>
 <script type="text/javascript" src="js/photographer-page.js"></script>
 <script type="text/javascript" src="js/trierPar.js"></script>
 <script type="text/javascript" src="js/openCloseModal.js"></script>
+<script type="text/javascript" src="js/likeTotalNumber.js"></script>
+<script type="text/javascript" src="js/addOneLike.js"></script>
+<script type="text/javascript" src="js/photographerPrice.js"></script>
 
 </html>

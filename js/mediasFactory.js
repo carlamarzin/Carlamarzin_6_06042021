@@ -5,7 +5,6 @@
    * @param {string} typeOfMedia
    * @param {string} mediaUrl
    * @return {function}
-
  */ 
 
 function factory(media){
@@ -19,7 +18,6 @@ function factory(media){
        
            return createImage(image, alt);
 
-
       }
 
       return createVideo(video, alt);
@@ -30,7 +28,7 @@ function factory(media){
 function createImage(mediaSrc, altText){
 
 
-       return `<img src="img/photographs/${mediaSrc}" alt="${altText}" />`;
+       return `<img class="photographer__content__article_media" src="img/photographs/${mediaSrc}" alt="${altText}" />`;
    
 
 }
@@ -39,7 +37,7 @@ function createVideo(mediaSrc, altText){
 
 
      return `
-        <video class="video" alt="${altText}">
+        <video class="photographer__content__article_media video" alt="${altText}">
             <source src="img/photographs/${mediaSrc}" type="video/mp4">
         </video>`;
 

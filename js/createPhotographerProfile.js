@@ -7,7 +7,7 @@
 
  */ 
 
- // D'après la fonction filterByPhotographerIs(), j'ai récupéré un array avec les infos, et ces médias
+ // D'après la fonction filterByPhotographerId(), j'ai récupéré un array avec les infos, et ces médias
  // D'après cet array, et ces infos, je renvoie du html
  
 function createPhotographerProfile(photographerPersonalInfo){

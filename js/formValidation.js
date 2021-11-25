@@ -1,7 +1,7 @@
 "use strict";
  
 /** 
-  * Fonction qui permet valider les champs d'entrée saisis par le user
+  * Fonction qui permet de valider les champs d'entrée saisis par le user
   * @param {array} data
   * @return {html}
 
