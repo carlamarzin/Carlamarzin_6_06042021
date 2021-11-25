@@ -18,22 +18,30 @@
 
           document.querySelector(".photographer__content").innerHTML = createPhotographerMedia(photographerInfo?.medias);
 
+          const mediasElements = document.querySelectorAll(".photographer__content__article_media");
+
+          mediasElements.forEach((media, index)=>{
+
+               media.addEventListener("click", ()=>{
+
+                    //J'apelle la fonction pour la lightbox, et lui passe deux paramètres > le premier est le array des médias
+                    //Pour le second paramètre : je récupère l'élément sur lequel le user a cliqué
+
+                    lightbox(photographerInfo?.medias, photographerInfo?.medias[index]);
+
+               });
+             
+          });
+
 
           // J'apelle la fonction pour ouvrir le formulaire de contact 
           formContact();
-
-          // J'apelle la fonction pour ouvrir la lightbox
-          lightboxOpen();
 
           // J'apelle la fonction pour modifier le nombre total de like
           //likeTotalNumber();
 
           //J'apelle la fonction pour augmenter le nombre de like, en fonction du nombre de cliques
           addOneLike();
-
-
-
-
 
 
           // PRICE
@@ -91,17 +99,7 @@
             console.log(mediasDateArrSorted);
             document.querySelector(".photographer__content").innerHTML = createPhotographers(mediasDateArrSorted);
           });
-
-
-          //J'apelle la fonction pour la lightbox, et lui passe deux paramètres > le premier est le array des médias
-          //Pour le second paramètre : je récupère l'élément sur lequel le user a cliqué
-
-          //J'écoute le click sur la photo > je déclenche l'ouverture de la lightbox, et la fonction correspondante 
-
-          document.querySelector('.photographer__content__article_media').innerHTML = addEventListener('click', function(){
-            lightboxOpen();
-            lightbox(photographerInfo.medias, (media => media));
-          });
+          
 
 
       });

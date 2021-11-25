@@ -361,7 +361,7 @@
       justify-content: center;
   }
 
-  .photographer-image{
+  #photographer-media{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -370,10 +370,14 @@
     color: #901C1C;
     padding-top: 10px;
   }
-  .photographer-image img{
-    max-height: 90vh;
-    min-height: 20vh;
-    min-width: 20vh;
+  #photographer-media img, #photographer-media video{
+    /* max-height: 90vh;
+    min-height: 20vh; */
+    height:90vh;
+    object-fit:cover;
+    /* min-width: 20vh; */
+    width:100%;
+    display:inline-block;
     border-radius: 5px;
   }
 

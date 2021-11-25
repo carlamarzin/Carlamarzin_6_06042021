@@ -2,24 +2,30 @@
 
 /** 
    * Fonction qui ajoute augmente le nombre de like en fonction du nombre de clique
-   * @param {array} data
-   * @param {array} data
+   * @param {array} medias
+   * @param {object} media
    * @return {html}
  */ 
 
 
 
 function lightbox(medias, media){
-  
+
+    document.querySelector(".lb-bground").style.display = "block";
+
     // Le media actuel qui est dans la lightbox
     let actualMediaId = media.id;
 
    //La lightbox est créée, je récupère l'emplacement du contenu de la photo ou de la vidéo
 
-    const lightboxContent = document.querySelector('.photographer__content__article_media');
-    console.log(lightboxContent);
+    const lightboxContent = document.querySelector('#photographer-media');
 
-    lightboxContent.innerHTML = factory(media);
+    lightboxContent.innerHTML = `
+        
+          ${factory(media)}
+          <span id="lightbox-modal_text">${media.title}</span>
+    
+    `
 
     //Je récupère l'emplacement des flèches suivantes et précédentes
 
@@ -47,7 +53,12 @@ function lightbox(medias, media){
             
             // Alors j'affiche l'image ayant l'index suivant
 
-            lightboxContent.innerHTML = factory(medias[actualIndex + 1]);
+            lightboxContent.innerHTML = `
+            
+               ${factory(medias[actualIndex + 1])}
+               <span id="lightbox-modal_text">${medias[actualIndex + 1].title}</span>
+            
+            `;
 
             //Et j'update la variable actualMediaId
         
@@ -74,7 +85,12 @@ function lightbox(medias, media){
             // Alors j'affiche l'image ayant l'index précédent
             // Mon factory me renvoie alors un HTML, avec une balise img ou vidéo
         
-            lightboxContent.innerHTML = factory(medias[actualIndex - 1]);
+            lightboxContent.innerHTML =`
+            
+            ${factory(medias[actualIndex - 1])}
+            <span id="lightbox-modal_text">${medias[actualIndex - 1].title}</span>
+            
+            `;
         
             return actualMediaId = medias[actualIndex - 1].id;
         

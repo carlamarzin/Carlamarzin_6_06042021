@@ -27,7 +27,7 @@ function factory(media){
 
 function createImage(mediaSrc, altText){
 
-
+       console.log(mediaSrc)
        return `<img class="photographer__content__article_media" src="img/photographs/${mediaSrc}" alt="${altText}" />`;
    
 
