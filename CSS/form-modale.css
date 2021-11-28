@@ -366,10 +366,12 @@
     display: flex;
     flex-direction: column;
   }
+  
   .lightbox-modal_text{
     color: #901C1C;
     padding-top: 10px;
   }
+  
   #photographer-media img, #photographer-media video{
     /* max-height: 90vh;
     min-height: 20vh; */
@@ -383,7 +385,16 @@
 
   .fleche{
     width: 20px;
-    margin: 20px;
+    margin-top: 50vh;
+    position: fixed;
+    cursor: pointer;
+  }
+
+  .previous{
+    left: 40px;
+  }
+  .next{
+    right: 40px;
   }
 
   .error{

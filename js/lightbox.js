@@ -88,7 +88,7 @@ function lightbox(medias, media){
             lightboxContent.innerHTML =`
             
             ${factory(medias[actualIndex - 1])}
-            <span id="lightbox-modal_text">${medias[actualIndex - 1].title}</span>
+            <span id="lightbox-modal_text" controls >${medias[actualIndex - 1].title}</span>
             
             `;
         

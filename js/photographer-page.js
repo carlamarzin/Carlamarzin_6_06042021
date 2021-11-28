@@ -34,34 +34,41 @@
           });
 
 
-          // J'apelle la fonction pour ouvrir le formulaire de contact 
-          formContact();
+
+          const likeElements = document.querySelectorAll(".photographer_content_likes");
+
+          //A chaque clique sur un like, je veux augmenter le nombre en conséquence
+
+          likeElements.forEach((like)=>{
+ 
+            like.addEventListener("click", ()=>{
+
+              addOneLike();
+
+              //let nombreDeLikes = document.querySelector(".nbr_of_likes");
+
+              //document.querySelector(".photographer_content_likes").addEventListener("click", () => {
+
+                //nombreDeLikes.textContent = parseInt(nombreDeLikes.textContent) +1 ;
+                
+              //});
+
+            });
+
+          });
 
           // J'apelle la fonction pour modifier le nombre total de like
-          //likeTotalNumber();
+          var mediaLikesArray = photographerInfo?.medias.map(media => media.likes);
+          likeTotalNumber(mediaLikesArray);
 
-          //J'apelle la fonction pour augmenter le nombre de like, en fonction du nombre de cliques
-          addOneLike();
-
-
-          // PRICE
-          // PRICE
-          // PRICE
 
           //J'apelle la fonction pour afficher le tarif de chaque photographe 
-          //photographerPrice();
+          let photographerPriceArray = photographerInfo?.infos.map(info => info.price);
+          photographerPrice(photographerPriceArray);
 
-          //Je récupère l'info du prix du photographe, et je l'intègre en HTML
-          let photographerPrice = photographerInfo?.infos.map(info => info.price);
-          console.log(photographerPrice);
-          document.querySelector(".photographer_statistics_likes_price").innerHTML = Number(photographerPrice) + "€/jour";
 
-                    // je crée un array, contenant tous les médias
-                    const photographerMedia = photographerInfo?.medias;
-          
-                    //je récupère l'élément likes sur
-                    const sortedMedia = photographerMedia.sort();
-
+          // J'apelle la fonction pour ouvrir le formulaire de contact 
+          formContact();
 
 
 

@@ -3,32 +3,22 @@
 /** 
    * Fonction qui ajoute augmente le nombre de like en fonction du nombre de clique
    * @return {true}
-
  */ 
 
 function addOneLike(){
+
   // I increment the number of like of each media, each time I click on the number/like div 
-  var likeDiv = document.querySelector(".photographer_content_likes");
-  var numberOfLikes = document.querySelector(".nbr_of_likes");
+
+  let likeDiv = document.querySelector(".photographer_content_likes");
+  let nombreDeLikes = document.querySelector(".nbr_of_likes");
 
   likeDiv.addEventListener("click", () => {
-    numberOfLikes.textContent = parseInt(numberOfLikes.textContent) +1 ;
+    nombreDeLikes.textContent = parseInt(nombreDeLikes.textContent) +1 ;
 
     //Je récupère les nouveaux totaux de likes
     //let updatedLikesArray = parseInt(numberOfLikes.textContent).map
-
-    let mediaLikesArray = photographerInfo?.medias.map(media => media.likes);
-    let mediaLikesSorted = mediaLikesArray.sort();
-
-    document.querySelector(".photographer_statistics_likes_nbr").innerHTML = likeTotalNumber(mediaLikesArray);
-
-    const sortedMedia = photographerMedia.sort();
-});
+  });
 };
-
-
-
-
 
 
 
