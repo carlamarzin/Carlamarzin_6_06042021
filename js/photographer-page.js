@@ -10,7 +10,7 @@
     
                 return alert(data);
     
-          }
+          };
 
           const photographerInfo = getPhotographerInfo(paramId, data);
 
@@ -76,38 +76,50 @@
           // TRIER PAR
           // TRIER PAR
 
-          //je stocke chaque valeur de filtre dans des variables 
+          // je récupère dans le DOM, l'emplacement des filtres
+          const filtrePopularite = document.querySelector(".popularite");
+          const filtreDate = document.querySelector(".date");
+          const filtreTitre = document.querySelector(".titre");
 
-          const filtrePopularite = document.querySelector("#popularite");
-          const filtreDate = document.querySelector("#date");
-          const filtreTitre = document.querySelector("#titre");
-
-          const filtres = document.querySelector(".trier_par_value");
-
-          // j'écoute le click sur chaque choix de filtre, et je retourne les médias, dans l'ordre choisi
-          //je crée un array pour chaque info filtrante
-          //je les ordonne avec .sort()
-          //j'intègre l'array des média en HTML
-
-          filtrePopularite.addEventListener("click", function(){
-            let mediasLikeArrSorted = photographerInfo?.medias.map(media => media.likes).sort();
-            console.log(mediasLikeArrSorted);
-            document.querySelector(".photographer__content").innerHTML = createPhotographers(mediasLikeArrSorted);
-          });
-
-          filtreDate.addEventListener("click", function(){
-            let mediasTitleArrSorted = photographerInfo?.medias.map(media => media.title).sort();
-            console.log(mediasTitleArrSorted);
-            document.querySelector(".photographer__content").innerHTML = createPhotographers(mediasTitleArrSorted);
-          });
-
-          filtreTitre.addEventListener("click", function(){
-            let mediasDateArrSorted = photographerInfo?.medias.map(media => media.date).sort();
-            console.log(mediasDateArrSorted);
-            document.querySelector(".photographer__content").innerHTML = createPhotographers(mediasDateArrSorted);
-          });
           
+          //Trier par popularité
+          // j'écoute l'évènement clique sur le filtre de popularité 
+          filtrePopularite.addEventListener('click', function(){
 
+            //je crée un nouvel array, avec les medias
+            const medias = photographerInfo?.medias;
 
-      });
-      
+            //je range en ordre croissant les média d'après leurs nombres de likes
+            const mediasSortedByPopularite = medias.sort((a, b) => parseFloat(a.likes) - parseFloat(b.likes));
+
+            //je remplace le contenu des médias
+            document.querySelector('.photographer__content').innerHTML = createPhotographerMedia(mediasSortedByPopularite);
+
+          });
+
+          // Trier par titre 
+          filtreTitre.addEventListener('click', function(){
+
+            const medias = photographerInfo?.medias;
+
+            const mediasSortedByTitre = medias.sort((a, b) => a.title.localeCompare(b.title));
+
+            document.querySelector('.photographer__content').innerHTML = createPhotographerMedia(mediasSortedByTitre);
+
+          });
+
+          // Trier par date 
+          filtreDate.addEventListener('click', function(){
+
+            const medias = photographerInfo?.medias;
+
+            medias.sort(function(a,b){
+              return new Date(b.date) - new Date(a.date);
+            });
+
+            document.querySelector('.photographer__content').innerHTML = createPhotographerMedia(medias);
+
+          });
+
+        });
+

@@ -37,7 +37,6 @@
                 document.querySelector("#photographers").innerHTML = createPhotographers(filterPhotographers);
                 // J'ajoute le HTML des photographes correspondants au tag
 
-
            });
 
       }

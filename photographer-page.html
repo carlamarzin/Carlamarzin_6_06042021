@@ -27,15 +27,29 @@
       
         </section>
 
-        <div class="photographer__trier">
+        <!-- <div class="photographer__trier">
             <label class="trier_par" for="trier_par">Trier par</label>
             <div class="custom-select" style="width:200px;">
               <select>
-                <option value="0" data-filtre="test" class="trier_par_value">Popularité</option>
-                <option value="1" data-filtre="popularite" class="trier_par_value" id="popularite">Popularitébis</option>
-                <option value="2" data-filtre="date" class="trier_par_value" id="date">Date</option>
-                <option value="3" data-filtre="titre" class="trier_par_value" id="titre">Titre</option>
+                <option value="0" data-filtre="popularite" class="trier_par_value" id="popularite">Trier par</option>
+                <option value="1" data-filtre="popularite" class="trier_par_value" id="popularite">Popularité</option>
+                <option value="1" data-filtre="date" class="trier_par_value" id="date">Date</option>
+                <option value="2" data-filtre="titre" class="trier_par_value" id="titre">Titre</option>
               </select>
+            </div>
+        </div>
+      -->
+        <div class="photographer__trier"></div>
+            <label class="trier_par" for="trier_par">Trier par</label>
+            <div id="hover-select" class="select-box">
+              <input id="one" data-filtre="popularite" class="trier_par_value popularite" type="radio" name="hover-select" checked>
+              <label for="one">Popularité</label>
+
+              <input id="two" data-filtre="popularite" class="trier_par_value date" type="radio" name="hover-select">
+              <label for="two">Date</label>
+
+              <input id="three" data-filtre="popularite" class="trier_par_value titre" type="radio" name="hover-select">
+              <label for="three">Titre</label>
             </div>
         </div>
 
@@ -147,7 +161,7 @@
 </body>
 
 <script type="text/javascript" src="js/filterByPhotographerId.js"></script>
-<script type="text/javascript" src="js/filtreByFilter.js"></script>
+<script type="text/javascript" src="js/photographerPrice.js"></script>
 <script type="text/javascript" src="js/createPhotographerProfile.js"></script>
 <script type="text/javascript" src="js/createPhotographerMedia.js"></script>
 <script type="text/javascript" src="js/mediasFactory.js"></script>
@@ -157,10 +171,8 @@
 <script type="text/javascript" src="js/fetchData.js"></script>
 <script type="text/javascript" src="js/formValidation.js"></script>
 <script type="text/javascript" src="js/photographer-page.js"></script>
-<script type="text/javascript" src="js/trierPar.js"></script>
 <script type="text/javascript" src="js/openCloseModal.js"></script>
 <script type="text/javascript" src="js/addOneLike.js"></script>
 <script type="text/javascript" src="js/likeTotalNumber.js"></script>
-<script type="text/javascript" src="js/photographerPrice.js"></script>
 
 </html>
