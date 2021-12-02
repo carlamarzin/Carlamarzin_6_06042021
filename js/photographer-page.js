@@ -35,24 +35,38 @@
 
 
 
-          const likeElements = document.querySelectorAll(".photographer_content_likes");
+          const buttonLike = document.querySelectorAll(".photographer-button-like");
 
           //A chaque clique sur un like, je veux augmenter le nombre en conséquence
 
-          likeElements.forEach((like)=>{
+          buttonLike.forEach((like)=>{
  
-            like.addEventListener("click", ()=>{
+            like.addEventListener("click", function(){
 
-              addOneLike();
+               let isLiked = this.dataset.like;
 
-              //let nombreDeLikes = document.querySelector(".nbr_of_likes");
+               const totalLikes = document.querySelector(".photographer_statistics_likes_nbr");
 
-              //document.querySelector(".photographer_content_likes").addEventListener("click", () => {
+               let actualTotalLikes = Number(totalLikes.textContent);
 
-                //nombreDeLikes.textContent = parseInt(nombreDeLikes.textContent) +1 ;
-                
-              //});
+               const actualPictureLikesNumber = Number(this.previousElementSibling.textContent);
 
+               if(isLiked === "No like"){
+
+                  this.previousElementSibling.textContent = actualPictureLikesNumber + 1; 
+
+                  totalLikes.textContent = Number(actualTotalLikes + 1);
+
+                  return this.dataset.like = "liked";
+
+               }
+
+               this.previousElementSibling.textContent = actualPictureLikesNumber - 1; 
+
+               totalLikes.textContent = Number(actualTotalLikes - 1);
+
+               return this.dataset.like = "No like";
+               
             });
 
           });
