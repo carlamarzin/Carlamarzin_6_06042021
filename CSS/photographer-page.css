@@ -29,7 +29,7 @@ body{
 
 /* HEADER */
 
-header img{
+.fisheye img{
     width: 250px;
     margin-bottom: 50px;
 }
@@ -61,7 +61,7 @@ main{
  top: 50px;
 }
 
-h2{
+header{
     font-size: 50px;
     color: #D3573C;
     margin-top: 5px;
@@ -170,12 +170,20 @@ article{
     position: fixed;
     bottom: 0;
     right: 80px;
-    padding: 15px 25px;
+    padding: 15px 25px; 
 }
 
 .photographer_statistics img{
     height: 20px;
     padding-top: 5px;
+}
+
+.video{
+  width: 100%;
+  height: 300px;
+  object-position: 50% 50%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* TRIER PAR */
@@ -186,111 +194,11 @@ article{
     display: flex;
     margin: 20px 0;
 }
+
 .trier_par{
     font-weight: bold;
     padding-right: 20px;
 }
-/* TRIER PAR
-
-.photographer__trier{
-    text-decoration: none;
-    margin: 20px 0 40px 0;
-}
-
-#trier_par{
-    background-color: #901C1C;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin-left: 10px;
-}
-.trier_par option{
-    border-top: 1px solid white;
-    border-color: transparent transparent white transparent;
-}
-
- */
-
-/* The container must be positioned relative: */
-.custom-select {
-    position: relative;
-    font-family: Arial;
-    background-color: #901C1C;
-    border-radius: 5px;
-  }
-  
-  .custom-select select {
-    display: none; /*hide original SELECT element: */
-  }
-  
-  .select-selected {
-    background-color: #901C1C;
-  }
-  
-  /* Style the arrow inside the select element: */
-  .select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: white transparent transparent transparent;
-  }
-  
-  /* Point the arrow upwards when the select box is open (active): */
-  .select-selected.select-arrow-active:after {
-    border-color: transparent transparent white transparent;
-    top: 7px;
-  }
-  
-  /* style the items (options), including the selected item: */
-  .select-items div,.select-selected {
-    color: white;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent white transparent;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Style items (options): */
-  .select-items {
-    position: absolute;
-    background-color: #901C1C;
-    border-radius: 0 0 5px 5px;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
-  
-  /* Hide the items when the select box is closed: */
-  .select-hide {
-    display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .video{
-    width: 100%;
-    height: 300px;
-    object-position: 50% 50%;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-
-
-
-/*
-TRIER PAR 2 
-TRIER PAR 2 
-TRIER PAR 2
-*/
 
 .select-box {
     position: relative;
@@ -324,6 +232,7 @@ TRIER PAR 2
   }
   #hover-select:hover {
     max-height: 160px;
+    position: absolute;
   }
   #hover-select:hover:after {
      transform: rotate(0deg);

@@ -27,6 +27,14 @@ function lightbox(medias, media){
     
     `
 
+    //Je récupère l'emplacement de l'élément video 
+    const video = document.querySelector('.video'); 
+
+    // Si le média est une vidéo, alors la const. video existe, alors je lui ajoute l'attribut "controls"
+    if (video){
+        video.setAttribute("controls", "");
+    }
+
     //Je récupère l'emplacement des flèches suivantes et précédentes
 
     const next = document.querySelector(".next");

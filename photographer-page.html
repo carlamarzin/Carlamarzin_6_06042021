@@ -16,42 +16,28 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
+        <a class="fisheye" role="link" href="index.html">
             <img src="img/Logo.png.png" alt="FishEye logo">
         </a>
-    </header>
 
     <main>
         <section id="photographer">
       
         </section>
 
-        <!-- <div class="photographer__trier">
-            <label class="trier_par" for="trier_par">Trier par</label>
-            <div class="custom-select" style="width:200px;">
-              <select>
-                <option value="0" data-filtre="popularite" class="trier_par_value" id="popularite">Trier par</option>
-                <option value="1" data-filtre="popularite" class="trier_par_value" id="popularite">Popularité</option>
-                <option value="1" data-filtre="date" class="trier_par_value" id="date">Date</option>
-                <option value="2" data-filtre="titre" class="trier_par_value" id="titre">Titre</option>
-              </select>
-            </div>
-        </div>
-      -->
-        <div class="photographer__trier"></div>
+        <div class="photographer__trier" aria-label="menubar trier les photos par" aria-expanded="false"></div>
             <label class="trier_par" for="trier_par">Trier par</label>
             <div id="hover-select" class="select-box">
               <input id="one" data-filtre="popularite" class="trier_par_value popularite" type="radio" name="hover-select" checked>
-              <label for="one">Popularité</label>
+              <label for="one" aria-label="menuitem popularite">Popularité</label>
 
-              <input id="two" data-filtre="popularite" class="trier_par_value date" type="radio" name="hover-select">
-              <label for="two">Date</label>
+              <input id="two" aria-label="menuitem date" data-filtre="popularite" class="trier_par_value date" type="radio" name="hover-select">
+              <label for="two" >Date</label>
 
-              <input id="three" data-filtre="popularite" class="trier_par_value titre" type="radio" name="hover-select">
+              <input id="three" aria-label="menuitem titre" data-filtre="popularite" class="trier_par_value titre" type="radio" name="hover-select">
               <label for="three">Titre</label>
             </div>
-        </div>
+          </div>
 
         <section class="photographer__content">
             
@@ -144,15 +130,13 @@
             </div>
         </div>
         <div class="lb-bground">
-            <div class="lightbox-modal">
+            <div class="lightbox-modal" role="dialog">
                 <span class="lb-close" alt="fermer la boîte de dialogue"></span>
                 <div class="lightbox-modal_body">
-                    <img class="fleche previous" src="img/chevron-left-solid.svg" alt="flèche précédente">
+                    <img class="fleche previous" role="link" src="img/chevron-left-solid.svg" alt="flèche précédente">
                     <div id="photographer-media">
-                        <!-- <img id="lightbox_content" src="img/photographs/Animals_Rainbow.jpg" alt="image d'un oiseau">
-                        <span id="lightbox-modal_text">Arc-en-ciel</span> -->
                     </div>
-                    <img class="fleche next" src="img/chevron-right-solid.svg" alt="flèche suivante">
+                    <img class="fleche next" role="link" src="img/chevron-right-solid.svg" alt="flèche suivante">
                 </div>
             </div>
         </div>

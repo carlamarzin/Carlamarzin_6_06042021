@@ -40,6 +40,8 @@
           //A chaque clique sur un like, je veux augmenter le nombre en conséquence
 
           buttonLike.forEach((like)=>{
+
+            //J'écoute l'évènement clique sur chaque like
  
             like.addEventListener("click", function(){
 
@@ -49,14 +51,17 @@
 
                let actualTotalLikes = Number(totalLikes.textContent);
 
+               //Je récupère l'élément précedent dans mon HTML, que je convertis en nombre
                const actualPictureLikesNumber = Number(this.previousElementSibling.textContent);
 
+               //Si l'élément n'a encore jamais été cliqué, alors je peux ajouter un like
                if(isLiked === "No like"){
 
                   this.previousElementSibling.textContent = actualPictureLikesNumber + 1; 
 
                   totalLikes.textContent = Number(actualTotalLikes + 1);
 
+                  //je retourne l'information que l'élément a déjà été cliqué 
                   return this.dataset.like = "liked";
 
                }
@@ -65,6 +70,7 @@
 
                totalLikes.textContent = Number(actualTotalLikes - 1);
 
+               //je retourne l'information que l'élément n'a pas déjà été cliqué 
                return this.dataset.like = "No like";
                
             });

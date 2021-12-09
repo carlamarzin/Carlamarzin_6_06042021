@@ -29,14 +29,12 @@ function createImage(mediaSrc, altText){
 
        return `<img class="photographer__content__article_media" src="img/photographs/${mediaSrc}" alt="${altText}" />`;
    
-
 }
 
 function createVideo(mediaSrc, altText){
 
-
      return `
-        <video controls class="photographer__content__article_media video" alt="${altText}">
+        <video class="photographer__content__article_media video" alt="${altText}">
             <source src="img/photographs/${mediaSrc}" type="video/mp4">
         </video>`;
 
