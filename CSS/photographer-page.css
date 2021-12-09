@@ -66,6 +66,10 @@ header{
     color: #D3573C;
     margin-top: 5px;
 }
+.fisheye{
+  display: inline-block;
+  height: 63px;
+}
 
 .photographer__text{
     padding-right: 30px;

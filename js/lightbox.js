@@ -32,7 +32,8 @@ function lightbox(medias, media){
 
     // Si le média est une vidéo, alors la const. video existe, alors je lui ajoute l'attribut "controls"
     if (video){
-        video.setAttribute("controls", "");
+        alert('video');
+        video.setAttribute("controls", true);
     }
 
     //Je récupère l'emplacement des flèches suivantes et précédentes
