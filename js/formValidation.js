@@ -98,10 +98,12 @@ function validationPrenom(){
       formulaire.style.display = "none";
       let modalSuccess = document.getElementById("content-success");
       modalSuccess.style.display = "flex";
-      let modalBody = document.getElementsByClassName("modal-body");
-      modalBody.className = "display-none";
-      let buttonSubmit = document.getElementsByClassName("btn-submit");
-      buttonSubmit.className = "display-none";
+      const modalBody = document.querySelector(".modal-body");
+      modalBody.style.display = "none";
+      const buttonSubmit = document.querySelector(".btn-submit");
+      buttonSubmit.style.display = "none";
+      const contactezMoi = document.querySelector('.contactez-moi');
+      contactezMoi.style.display = "none";
     }else{
       return false;
     }

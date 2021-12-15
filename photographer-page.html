@@ -27,15 +27,15 @@
 
         <div class="photographer__trier" aria-label="menubar trier les photos par" aria-expanded="false"></div>
             <label class="trier_par" for="trier_par">Trier par</label>
-            <div id="hover-select" class="select-box">
+            <div id="hover-select" role="tablist" class="select-box">
               <input id="one" data-filtre="popularite" class="trier_par_value popularite" type="radio" name="hover-select" checked>
-              <label for="one" aria-label="menuitem popularite">Popularité</label>
+              <label for="one" role="tab" aria-label="menuitem popularite">Popularité</label>
 
               <input id="two" aria-label="menuitem date" data-filtre="popularite" class="trier_par_value date" type="radio" name="hover-select">
-              <label for="two" >Date</label>
+              <label for="two" role="tab">Date</label>
 
               <input id="three" aria-label="menuitem titre" data-filtre="popularite" class="trier_par_value titre" type="radio" name="hover-select">
-              <label for="three">Titre</label>
+              <label for="three" role="tab">Titre</label>
             </div>
           </div>
 
@@ -53,7 +53,7 @@
 
         <div class="bground" id="form-contact">
             <div class="content">
-              <span class="close"></span>
+              <button class="close"></button>
               <div class="modal-body">
                   <div class="contactez-moi">Contactez-moi</div>
                   <div class="contactez-moi_photographer"></div>
@@ -157,5 +157,6 @@
 <script type="text/javascript" src="js/photographer-page.js"></script>
 <script type="text/javascript" src="js/openCloseModal.js"></script>
 <script type="text/javascript" src="js/likeTotalNumber.js"></script>
+<script type="text/javascript" src="js/logInputValue.js"></script>
 
 </html>
