@@ -205,7 +205,7 @@ article{
 }
 
 .select-box {
-    position: relative;
+    position: absolute;
     display: inline-block;
     min-height: 40px;
     max-height: 40px;
@@ -304,12 +304,11 @@ article{
   @media screen and (max-width: 768px){
 
     body{
-      margin: 10px 10px 0 10px;
+      margin: 20px 20px 0 20px;
     }
 
     .fisheye{
       display: flex;
-      justify-content: center;
       height: 100%;
     }
 
@@ -320,15 +319,9 @@ article{
 
     .photographer__text{
       width: 100%;
-      justify-content: center;
-      vertical-align: center;
-      text-align: center;
-      
     }
     .photographer__link{
       display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     .tag{
       margin: 3px;
@@ -345,24 +338,24 @@ article{
     #display-form{
     }
 
+    .photographer__contacter{
+      position: fixed;
+      bottom: 5px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      padding: 5px 20px;
+    }
+
     #photographer{
+      padding: 0px;
+      background-color: white;
+      margin: 40px 10px 20px 0px;
+    }
 
-      padding: 20px;
-
-      position: relative;
-      
-      display: grid;
-      grid-template-areas: 
-      "photo"
-      "nom"
-      "location"
-      "leitmotiv"
-      "tag"
-      "contact";
-      flex-wrap: wrap;
-      grid-template-columns: 1fr;
-      grid-gap: 5px;
-      margin: 40px 10px 60px 10px;
+    .photographer__image{
+      position: absolute;
+      right: 0;
     }
 
     .photographer__content{
@@ -370,27 +363,30 @@ article{
     }
 
     .photographer_statistics{
-      position: fixed;
-      bottom: 0;
-      align-items: center;
+      display: none;
     }
     header{
-      grid-area: nom;
+      font-size: 40px;
     }
-    .photographer__text__location{
-      grid-area: location;
-    }
-    .photographer__text__leitmotiv{
-      grid-area: leitmotiv;
-    }
-    .photographer__link{
-      grid-area: tag;
-    }
-    .photographer__contacter{
-      grid-area: contact;
+    .photographer__image img{
+      margin-top: 0px;
+      height: 100px;
+      width: 100px;
     }
     .photographer__image{
-      grid-area: photo;
+      margin-top: 0;
     }
+
+    .photographer__trier{
+      display: none;
+    }
+    .trier_par{
+      display: none;
+    }
+    #hover-select{
+      display: none;
+    }
+
+    
   }
 

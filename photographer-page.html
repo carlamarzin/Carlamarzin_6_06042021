@@ -16,7 +16,7 @@
 </head>
 
 <body>
-        <a class="fisheye" role="link" href="index.html">
+        <a tabindex="1" class="fisheye" role="link" href="index.html">
             <img src="img/Logo.png.png" alt="FishEye logo">
         </a>
 
@@ -27,15 +27,15 @@
 
         <div class="photographer__trier" aria-label="menubar trier les photos par" aria-expanded="false"></div>
             <label class="trier_par" for="trier_par">Trier par</label>
-            <div id="hover-select" role="tablist" class="select-box">
+            <div id="hover-select" role="navigation" class="select-box">
               <input id="one" data-filtre="popularite" class="trier_par_value popularite" type="radio" name="hover-select" checked>
-              <label for="one" role="tab" aria-label="menuitem popularite">Popularité</label>
+              <label tabindex=" 4" for="one" role="button" aria-label="menuitem popularite">Popularité</label>
 
               <input id="two" aria-label="menuitem date" data-filtre="popularite" class="trier_par_value date" type="radio" name="hover-select">
-              <label for="two" role="tab">Date</label>
+              <label tabindex="4" for="two" role="button">Date</label>
 
               <input id="three" aria-label="menuitem titre" data-filtre="popularite" class="trier_par_value titre" type="radio" name="hover-select">
-              <label for="three" role="tab">Titre</label>
+              <label tabindex="4" for="three" role="button">Titre</label>
             </div>
           </div>
 
@@ -53,7 +53,7 @@
 
         <div class="bground" id="form-contact">
             <div class="content">
-              <button class="close"></button>
+              <button tabindex="3" class="close"></button>
               <div class="modal-body">
                   <div class="contactez-moi">Contactez-moi</div>
                   <div class="contactez-moi_photographer"></div>
@@ -66,7 +66,8 @@
                   <div
                     class="formData">
                     <label for="first">Prénom</label><br>
-                    <input
+                    <input 
+                      tabindex="2"
                       aria-labelledby="prénom"
                       class="text-control"
                       type="text"
@@ -81,6 +82,7 @@
                     class="formData">
                     <label for="last">Nom</label><br>
                     <input
+                      tabindex="2"
                       aria-labelledby="nom"
                       class="text-control"
                       type="text"
@@ -95,6 +97,7 @@
                     class="formData">
                     <label for="email">E-mail</label><br>
                     <input
+                      tabindex="2"
                       aria-labelledby="email"
                       class="text-control"
                       type="email"
@@ -108,6 +111,7 @@
                     class="formData">
                     <label for="message">Votre message</label>
                     <textarea 
+                        tabindex="2"
                         aria-labelledby="ici votre message"
                         class="text-control"
                         minlength="50"
@@ -120,6 +124,7 @@
                   </div>
                 <div>
                     <input
+                        tabindex="2"
                         class="btn-submit"
                         type="submit"
                         value="Envoyer"
@@ -131,12 +136,12 @@
         </div>
         <div class="lb-bground">
             <div class="lightbox-modal" role="dialog">
-                <span class="lb-close" alt="fermer la boîte de dialogue"></span>
+                <span tabindex="8" class="lb-close" alt="fermer la boîte de dialogue"></span>
                 <div class="lightbox-modal_body">
-                    <img class="fleche previous" role="link" src="img/chevron-left-solid.svg" alt="flèche précédente">
+                    <img tabindex="6" class="fleche previous" role="link" src="img/chevron-left-solid.svg" alt="flèche précédente">
                     <div id="photographer-media">
                     </div>
-                    <img class="fleche next" role="link" src="img/chevron-right-solid.svg" alt="flèche suivante">
+                    <img tabindex="7"class="fleche next" role="link" src="img/chevron-right-solid.svg" alt="flèche suivante">
                 </div>
             </div>
         </div>

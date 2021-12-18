@@ -22,7 +22,7 @@ function createPhotographerMedia(photographerPersonalInfo){
                             <h3 class="photographer_content_post">${photographerPersonalInfo[i].title}</h3>
                             <div class="photographer_content_likes">
                                 <span class="nbr_of_likes">${photographerPersonalInfo[i].likes}</span>
-                                <img class="photographer-button-like" data-like="No like" src="img/heart.svg" alt="heart">
+                                <img tabindex="5" class="photographer-button-like" data-like="No like" src="img/heart.svg" alt="heart">
                             </div>
                         </div>
                 </article>

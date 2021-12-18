@@ -404,3 +404,32 @@
   .display-none{
     display: none;
   }
+
+
+  @media screen and (max-width: 768px){
+    #photographer-media{
+      padding: 30px;
+      position: relative;
+    }
+    #photographer-media img{
+      height: unset !important;
+      max-height: 80vh;
+      max-width: 70vh;
+    }
+    .lb-close{
+      right: 0px;
+    }
+    .fleche{
+      width: 10px;
+      margin-top: 50vh;
+      position: fixed;
+      cursor: pointer;
+    }
+    .previous{
+      left: 5px;
+    }
+    .next{
+      right: 5px;
+    }
+
+  }
