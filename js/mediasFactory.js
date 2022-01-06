@@ -27,13 +27,13 @@ function factory(media){
 
 function createImage(mediaSrc, altText){
 
-       return `<img tabindex="5" role="img" class="photographer__content__article_media" src="img/photographs/${mediaSrc}" alt="${altText}" />`;
+       return `<img tabindex="5" role="img" class="photographer__content__article_media" src="img/photographs/${mediaSrc}" alt="${altText}" data-alttxt="${altText}" />`;
    
 }
 
 function createVideo(mediaSrc, altText){
 
-     return `<video tabindex="5" role="img" class="photographer__content__article_media video" alt="${altText}">
+     return `<video tabindex="5" role="img" class="photographer__content__article_media video" alt="${altText}" data-alttxt="${altText}">
                     <source src="img/photographs/${mediaSrc}" type="video/mp4">
                </video>`;
 
