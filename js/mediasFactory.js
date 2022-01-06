@@ -33,9 +33,8 @@ function createImage(mediaSrc, altText){
 
 function createVideo(mediaSrc, altText){
 
-     return `
-        <video tabindex="5" role="img" class="photographer__content__article_media video" alt="${altText}">
-            <source src="img/photographs/${mediaSrc}" type="video/mp4">
-        </video>`;
+     return `<video tabindex="5" role="img" class="photographer__content__article_media video" alt="${altText}">
+                    <source src="img/photographs/${mediaSrc}" type="video/mp4">
+               </video>`;
 
 }
