@@ -55,7 +55,7 @@ function lightbox(medias, media){
 
         //Ensuite, si l'index n'est pas le dernier > donc si son index est différent de la longueur de l'array
         //Alors j'affiche le média suivant
-        // Mon factory me renvoie alors un HTML, avec une balise img ou vidéo
+        //Mon factory me renvoie alors un HTML, avec une balise img ou vidéo
     
         if(actualIndex !== medias.length){
             

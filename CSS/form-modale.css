@@ -416,8 +416,13 @@
       max-height: 80vh;
       max-width: 70vh;
     }
+    #photographer-media video{
+      max-width: 95vh;
+      height: unset;
+    }
     .lb-close{
       right: 0px;
+      margin-left: 20px;
     }
     .fleche{
       width: 10px;

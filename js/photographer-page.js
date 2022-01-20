@@ -69,6 +69,30 @@
 
                     }
 
+                     //On gère le clique sur les flèches next et previous de la lightbox 
+
+                     if(["photographer__content__article_media video", "photographer__content__article_media"].includes(event.target?.className) === true){
+
+                            // On a besoin de trouver la position(index) qu'a le media sur lequel on a clique (flèche) dans le tableau des medias,
+
+                            // Car comme on le sait la lightbox prend en parametres le tableau contenant tous les medias et le media courant sur lequel on a clique.
+
+                            const altTxt = event?.target?.dataset?.alttxt;
+
+                            const index = photographerInfo?.medias.findIndex((element)=>{
+
+                                return element?.alt === altTxt;
+
+                            });
+
+
+                          //J'apelle la fonction pour la lightbox, et lui passe deux paramètres > le premier est le array des médias
+                          //Pour le second paramètre : je récupère l'élément sur lequel le user a cliqué
+
+                          return lightbox(photographerInfo?.medias, photographerInfo?.medias[index]);
+                    }
+
+
                     // ON gere le clique sur les boutons de like
 
                     if(event.target?.className === "photographer-button-like"){
