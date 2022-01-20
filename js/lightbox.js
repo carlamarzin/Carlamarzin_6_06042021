@@ -116,4 +116,15 @@ function lightbox(medias, media){
     
     });
 
+
+    document.addEventListener("keydown", (event)=>{
+
+            if(event.key === "Escape"){
+
+                return lbBground.style.display = "none";
+
+            }
+
+    });
+
 };
