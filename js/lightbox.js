@@ -115,7 +115,7 @@ function lightbox(medias, media){
         };
     
     });
-
+ 
 
     document.addEventListener("keydown", (event)=>{
 
@@ -126,5 +126,45 @@ function lightbox(medias, media){
             }
 
     });
+
+    document.addEventListener("keydown", (event)=>{
+
+            if(event.key === "ArrowRight"){
+
+                alert("flèche droite");
+
+                let actualMediaId = media.id;
+
+                const actualIndex = medias.findIndex((element)=>{
+        
+                    return element.id === actualMediaId;
+                
+                });
+
+                return actualMediaId = medias[actualIndex + 1].id;
+
+            }
+
+    });
+
+    document.addEventListener("keydown", (event)=>{
+
+        if(event.key === "ArrowLeft"){
+
+            alert("flèche gauche");
+
+            let actualMediaId = media.id;
+
+            const actualIndex = medias.findIndex((element)=>{
+        
+                return element.id === actualMediaId;
+            
+            });
+
+            return actualMediaId = medias[actualIndex - 1].id;;
+
+        }
+
+});
 
 };
