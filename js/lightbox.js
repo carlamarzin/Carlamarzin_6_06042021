@@ -45,7 +45,44 @@ function lightbox(medias, media){
 
     next.addEventListener("click", ()=>{
     
-        // Premièrement il faut déterminer l'index du media actuel dans la lightbox
+         nextPicture();
+    
+    });
+
+    //J'écoute l'évènement clique sur la flèche précédente > au clique, je change le contenu de la lightbox
+
+    previous.addEventListener("click", ()=>{
+    
+        previousPicture();
+    
+    });
+ 
+
+    document.addEventListener("keydown", (event)=>{
+
+            if(event.key === "Escape"){
+
+                return lbBground.style.display = "none";
+
+            }
+            
+            if(event.key === "ArrowRight"){
+
+                nextPicture();
+            }
+
+            if(event.key === "ArrowLeft"){
+
+                previousPicture();
+
+            }
+
+    });
+
+
+    function nextPicture(){
+
+             // Premièrement il faut déterminer l'index du media actuel dans la lightbox
     
         const actualIndex = medias.findIndex((element)=>{
         
@@ -78,13 +115,11 @@ function lightbox(medias, media){
             return actualMediaId = medias[actualIndex + 1].id;
         
         }
-    
-    });
 
-    //J'écoute l'évènement clique sur la flèche précédente > au clique, je change le contenu de la lightbox
+    }
 
-    previous.addEventListener("click", ()=>{
-    
+    function previousPicture(){
+
         const actualIndex = medias.findIndex((element)=>{
         
             return element.id === actualMediaId;
@@ -113,49 +148,6 @@ function lightbox(medias, media){
             return actualMediaId = medias[actualIndex - 1].id;
         
         };
-    
-    });
- 
 
-    document.addEventListener("keydown", (event)=>{
-
-            if(event.key === "Escape"){
-
-                return lbBground.style.display = "none";
-
-            }
-            
-            if(event.key === "ArrowRight"){
-
-                alert("flèche droite");
-
-                let actualMediaId = media.id;
-
-                const actualIndex = medias.findIndex((element)=>{
-        
-                    return element.id === actualMediaId;
-                
-                });
-
-                return actualMediaId = medias[actualIndex + 1].id;
-
-            }
-
-            if(event.key === "ArrowLeft"){
-
-                alert("flèche gauche");
-
-                let actualMediaId = media.id;
-
-                const actualIndex = medias.findIndex((element)=>{
-            
-                    return element.id === actualMediaId;
-                
-                });
-
-                return actualMediaId = medias[actualIndex - 1].id;
-
-            }
-
-    });
+    }
 };
