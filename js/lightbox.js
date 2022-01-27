@@ -124,11 +124,7 @@ function lightbox(medias, media){
                 return lbBground.style.display = "none";
 
             }
-
-    });
-
-    document.addEventListener("keydown", (event)=>{
-
+            
             if(event.key === "ArrowRight"){
 
                 alert("flèche droite");
@@ -145,26 +141,21 @@ function lightbox(medias, media){
 
             }
 
-    });
+            if(event.key === "ArrowLeft"){
 
-    document.addEventListener("keydown", (event)=>{
+                alert("flèche gauche");
 
-        if(event.key === "ArrowLeft"){
+                let actualMediaId = media.id;
 
-            alert("flèche gauche");
-
-            let actualMediaId = media.id;
-
-            const actualIndex = medias.findIndex((element)=>{
-        
-                return element.id === actualMediaId;
+                const actualIndex = medias.findIndex((element)=>{
             
-            });
+                    return element.id === actualMediaId;
+                
+                });
 
-            return actualMediaId = medias[actualIndex - 1].id;;
+                return actualMediaId = medias[actualIndex - 1].id;
 
-        }
+            }
 
-});
-
+    });
 };
